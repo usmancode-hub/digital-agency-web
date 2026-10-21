@@ -1,0 +1,387 @@
+* {
+    margin-top: 5px;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: #0d0d0d;
+    color: azure;
+}
+
+nav i {
+    color: rgb(227, 222, 216);
+    font-size: 20px;
+}
+
+nav .logo {
+    color: orange;
+    font-size: 32px;
+    font-weight: 800;
+    /* background-color: aqua; */
+    margin-top: 20px;
+}
+
+nav {
+    position:fixed ;
+    z-index: 100;
+    top: 0;
+}
+
+nav ul {
+    /* background-color: rgb(41, 40, 40); */
+    list-style: none;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: 500;
+    color:white;
+    /* background-color: rgb(152, 155, 155); */
+    /* color: rgb(21, 20, 20); */
+    text-shadow: 2px 3px 10px wheat;
+}
+
+.herosec {
+    /* background-color: rgb(63, 63, 63); */
+    height: 50vh;
+    width: 60vw;
+    margin-top: 300px;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 30px;
+}
+.herosec .ctn-btn:hover{
+    background-color: antiquewhite;
+    transform: scale(1.07);
+}
+.herosec h3 {
+    text-transform: capitalize;
+    font-size: 25px;
+    color: rgb(250, 145, 6);
+
+}
+.fade-in{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeINUp 1.9s ease forwards;
+}
+.herosec span .fade-in{
+    animation-delay: 0.3s;
+}
+@keyframes fadeINUp {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.herosec span {
+    color: rgb(149, 151, 151);
+    text-transform: capitalize;
+    margin: 15px;
+    font-size: 19px;
+}
+.about{
+    /* background-color: rgb(77, 77, 77); */
+    /* height: 50vh; */
+    /* width: 60vw; */
+    /* display: flex; */
+    opacity: 0;
+    text-align: center;
+    padding: 80px 40px;
+  transform: translateX(-50deg);
+  transition: all 3s ease;
+    flex-direction: column;
+}
+.about{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 32px;
+    color:orange;
+    margin-bottom: 15px;
+}
+
+.about p {
+    /* color: rgb(165, 167, 167); */
+    max-width: 600px;
+    line-height: 1.6;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+#services h2 {
+    color: rgb(243, 176, 93);
+    margin-top: 100px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.countainer-card {
+    /* background-color: black; */
+    height: 100%;
+    /* margin: 20px; */
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.Services {
+    padding: 80px 40px;
+    align-items: center;
+    background-color: #111;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.services-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    color: antiquewhite;
+    margin: 30px;
+    gap: 20px;
+    padding: 35px 25;
+    transition: transform 0.4s ease, box-shadow 0.04 ease;
+}
+
+.services-card :hover {
+    transform: translateY(-12deg);
+    box-shadow: 0 10px 250px rgba(100, 15, 0, 24);
+}
+
+.Services i {
+    color: orange;
+    font-size: 35px;
+    margin-top: 15px;
+    transition: transform 0.4s ease;
+}
+
+.services-card :hover {
+    transform: rotate(360deg);
+}
+
+.Services :hover i {
+    transform: rotate(360deg);
+   
+}
+.Services .services-card:hover{
+     box-shadow: 0 10px 5px rgba(255, 165, 0);
+}
+.services-card h3 {
+    margin-top: 10px;
+
+}
+
+.services-card span {
+    color: #ccc;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.stats {
+    /* width: 500px; */
+    /* height: 300px; */
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* border:2px solid orange; */
+    gap: 30px;
+    padding: 80px 40px;
+}
+
+#stats .stat-item {
+    min-width: 150px;
+
+
+}
+
+#stats .stat-item .counter {
+    color: orange;
+    font-size: 42px;
+}
+
+#stats .stat-item span {
+    color: #939191;
+    margin-top: 5px;
+}
+
+.testimonials {
+  padding: 80px 40px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.testimonials h2{
+    font-size: 30px;
+    color:orange;
+    margin-bottom: 30px;
+}
+.slinder{
+max-width: 600px;
+margin: 0 auto;
+position: relative;
+height: 60px;
+}
+.testimonials{
+    /* position: absolute; */
+    width: 100%;
+    /* opacity: 0; */
+    transition: opacity 1s ease-in;
+    color:#ccc;
+    font-style: italic;
+}
+.testimonials .active{
+    opacity: 1;
+}
+.contact{
+    padding: 80px 40px;
+    text-align: center;
+}
+#contact h2{
+    font-size: 32px;
+    color:orange;
+    margin-bottom: 25px;
+}
+.ctn-btn{
+    background-color: orange;
+    padding: 14px 35px;
+    border:none;
+    border-radius:  30px;
+    color:black;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+ .ctn-btn :hover{
+    transform: scale(1.08);
+    background-color: white;
+}
+.pulse{
+    animation: pulse .9s infinite;
+}
+@keyframes pulse{
+    0%{
+        box-shadow: 0 10px 0 0 rgba(205, 165, 0 ,0.6);
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(255, 155, 0 ,0.6);
+    }
+    70%{
+        box-shadow: 0 0 0 10px rgba(255, 165, 0 ,0.6);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(255, 165, 0 ,0.6);
+    }
+}
+@media (max-width:608px)
+{
+    nav{
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    nav ul{
+          
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        height: auto;
+    
+        margin-bottom: 50px;
+        width: 100%;
+    }
+        nav ul li a{
+            font-size: 22px;
+        }
+    .herosec {
+        margin-top: 130px;
+        width: 90vw;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .herosec h3 {
+        font-size: 20px;
+    }
+
+    .about {
+        padding: 40px 20px;
+    }
+
+    .services-card {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .stats {
+        gap: 25px;
+        padding: 40px 20px;
+    }
+
+    #stats .stat-item {
+        min-width: 120px;
+    }
+
+    #stats .stat-item .counter {
+        font-size: 32px;
+    }
+
+    .testimonials {
+        padding: 40px 20px;
+    }
+
+    .slinder {
+        max-width: 100%;
+        height: 90px;
+    }
+
+    .contact {
+        padding: 40px 20px;
+    }
+
+    .ctn-btn {
+        width: 100%;
+        padding: 14px;
+    }
+
+}

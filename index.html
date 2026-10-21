@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
+    <title>NovaTeh | Digital Solutions</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <nav id="navbar">
+   <span class="logo"><i class="fa-brands fa-yelp"></i>NovaTech</span>
+   <ul>
+    <li> <a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#stats">Stats</a></li>
+    <li><a href="#testimonial">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+   </ul>
+    </nav>
+    <section class="herosec" id="vanta-hero">
+        <h3 class="fade-in">we build digital experiences</h3>
+        <span class="fade-in">design.develop. deliver.</span>
+        <button class="ctn-btn">Get started</button>
+    </section>
+    <section id="secthree" class="about">
+    <h2 class="sec-h2">About Us</h2>
+    <p>We are a creative digital agency helping businesses grow through modren web solutions</p>
+    </section>
+    <section id="services" class="Services">
+        <h2>Our Servies</h2>
+        <div class="countainer-card">
+            </div>
+            <div class="services-card">
+                 <i class="fa-solid fa-mobile-screen"></i>
+                <h3>App Design</h3>
+                <span>Beautiful mobile app interfaces</span>
+                                   </div>
+                        <div class="services-card">
+                <i class="fa-solid  fa-code"></i>
+                <h3>Web Development</h3>
+                <span>fast,reponsive, modren</span>
+                        </div>
+            <div class="services-card">
+               <i class="fa-solid fa-chart-line"></i>
+                <h3>SEO Growth</h3>
+                <span>Rank higher, grow faster.</span>
+            </div>
+               <div class="services-card">
+                 <i class="fa-solid fa-pen-ruler"></i>
+                <h3>UI/UX Design</h3>
+                <span>creative design that make every Experience better</span>
+                                   </div>
+        </div>
+    </section>
+    <section id="stats" class="stats">
+        <div class="stat-item">
+            <h2 class="counter" data-target="7">0</h2>
+            <span> Project Done</span>
+        </div>
+           <div class="stat-item">
+            <h2 class="counter" data-target="5">0</h2>
+            <span> Happy Clients</span>
+        </div>
+           <div class="stat-item">
+            <h2 class="counter" data-target="3">0</h2>
+            <span>Years Experience</span>
+        </div>
+           <div class="stat-item">
+            <h2 class="counter" data-target="3">0</h2>
+            <span>Client Reviews</span>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Clients Say</h2>
+        <div class="slinder">
+            <div class="testimonial active">"Amazing work, highly professional team!"-Ali Raza</div>
+            <div class="testimonial">"The delivered beyond expectations."-Muhammad Moiz</div>
+            <div class="testimonial">"Best agancy we've worked with."-Hamza Tariq</div>
+            </div>
+            </section>
+    <div id="contact" class="contact">
+       <h2>Lets Work Together</h2>
+       <button class="ctn-btn pulse">Contact Us </button>
+    </div>
+    <footer>&COPY; NoveTech. All Right Reserved</footer>
+   <script>
+   VANTA.NET({
+  el: "#your-element-selector",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00
+})
+window.addEventListener('scroll', function() {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+const aboutSection = document.querySelector('.about');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+observer.observe(aboutSection);
+
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+  const target = +counter.getAttribute('data-target');
+  let count = 0;
+  const increment = target / 100;
+
+  const updateCounter = () => {
+    count += increment;
+    if (count < target) {
+      counter.innerText = Math.ceil(count);
+      requestAnimationFrame(updateCounter);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCounter();
+});
+const testimonials = document.querySelectorAll('.testimonial');
+let currentTestimonial = 0;
+
+setInterval(() => {
+  testimonials[currentTestimonial].classList.remove('active');
+  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+  testimonials[currentTestimonial].classList.add('active');
+}, 3000);
+   </script>
+</body>
+</html>
